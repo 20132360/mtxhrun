@@ -1,0 +1,9 @@
+
+config:
+    name: mtx_admin testsuite
+
+testcases:
+-
+    name: mtx管理员登录接口
+    testcase: testcases/admin_testcase.yml
+

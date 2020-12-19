@@ -1,0 +1,9 @@
+
+config:
+    name: mtx_delivery testsuite
+
+testcases:
+-
+    name: mtx管理员发货接口
+    testcase: testcases/delivery_testcase.yml
+

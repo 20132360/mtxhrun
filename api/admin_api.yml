@@ -1,0 +1,16 @@
+
+name: mtx admin
+base_url: http://121.42.15.146:9090
+
+request:
+    url: /mtx/admin.php?s=/admin/login.html
+    method: POST
+    headers:
+        X-Requested-With: XMLHttpRequest
+    data:
+        username: shamo
+        login_pwd: 123456
+
+validate:
+    - eq: [content.msg, 登录成功]
+

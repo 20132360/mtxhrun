@@ -1,0 +1,9 @@
+
+config:
+    name: mtx_collect testsuite
+
+testcases:
+-
+    name: mtx评论接口
+    testcase: testcases/commentssave_testcase.yml
+

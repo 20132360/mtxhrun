@@ -1,0 +1,9 @@
+
+config:
+    name: mtx_collect testsuite
+
+testcases:
+-
+    name: mtx管理员收获接口
+    testcase: testcases/collect_testcase.yml
+

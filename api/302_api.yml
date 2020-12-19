@@ -1,0 +1,12 @@
+
+name: mtx 302
+base_url: http://121.42.15.146:9090
+
+request:
+    #url需要从响应的jump_url获取
+    url: $jump_url
+    method: GET
+    allow_redirects: False
+validate:
+    - eq: ["status_code", 302]
+

@@ -1,0 +1,17 @@
+
+config:
+    name: mtx order
+
+teststeps:
+-
+    name: 登录接口
+    api: api/login_api.yml
+    validate:
+        - eq: [content.msg, 登录成功]
+
+-
+    name: 下订单接口
+    api: api/order_api.yml
+    validate:
+        - eq: [content.msg, 提交成功]
+

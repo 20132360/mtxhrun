@@ -1,0 +1,19 @@
+
+name: mtx delivery
+base_url: http://121.42.15.146:9090
+
+request:
+    url: /mtx/admin.php?s=/order/delivery.html
+    method: POST
+    headers:
+        X-Requested-With: XMLHttpRequest
+    data:
+        express_number: 44444445
+        id: $id
+        express_id: 1
+        user_id: $user_id
+
+
+validate:
+    - eq: [content.msg, 发货成功]
+

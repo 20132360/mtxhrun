@@ -1,0 +1,9 @@
+
+config:
+    name: mtx_login testsuite
+
+testcases:
+-
+    name: mtx登录接口
+    testcase: testcases/login_testcase.yml
+

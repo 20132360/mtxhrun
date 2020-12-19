@@ -1,0 +1,9 @@
+
+config:
+    name: mtx_order testsuite
+
+testcases:
+-
+    name: mtx下订单接口
+    testcase: testcases/order_testcase.yml
+

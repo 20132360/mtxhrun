@@ -1,0 +1,12 @@
+
+name: mtx pay
+base_url: http://121.42.15.146:9090
+
+request:
+    #url需要从响应的302接口的响应头获取
+    url: $location
+    method: GET
+
+validate:
+    - eq: ["status_code", 200]
+    - contains: [content, 支付成功]

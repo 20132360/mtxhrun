@@ -1,0 +1,16 @@
+
+name: mtx login
+base_url: http://121.42.15.146:9090
+variables:
+    var1: value1
+    var2: value2
+request:
+    url: /mtx/index.php?s=/index/user/login.html
+    method: POST
+    headers:
+        X-Requested-With: XMLHttpRequest
+    data:
+        accounts: yaoyao
+        pwd: yaoyao
+validate:
+    - eq: [content.msg, 登录成功]

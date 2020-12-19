@@ -1,0 +1,11 @@
+
+config:
+    name: mtx login
+
+teststeps:
+-
+    name: 登录接口
+    api: api/login_api.yml
+    validate:
+        - eq: [content.msg, 登录成功]
+

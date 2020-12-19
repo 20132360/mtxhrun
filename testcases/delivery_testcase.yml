@@ -1,0 +1,39 @@
+
+config:
+    name: mtx delivery
+
+teststeps:
+-
+    name: 登录接口
+    api: api/login_api.yml
+    validate:
+        - eq: [content.msg, 登录成功]
+
+-
+    name: 下订单接口
+    api: api/order_api.yml
+    extract:
+        - jump_url: content.data.jump_url
+        - id: content.data.order.id
+        - user_id: content.data.order.user_id
+    validate:
+        - eq: [content.msg, 提交成功]
+
+-
+    name: 302接口发起请求
+    api: api/302_api.yml
+    extract:
+        #headers是响应头，响应头的信息都封装在headers中
+        - location: headers.Location
+
+-
+    name: 支付接口
+    api: api/pay_api.yml
+
+-
+    name: 管理员登录接口
+    api: api/admin_api.yml
+
+-
+    name: 发货接口
+    api: api/delivery_api.yml
